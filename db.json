@@ -1,0 +1,21 @@
+{
+    "articles": [
+      {
+        "id": 1,
+        "artist": "Example Artist",
+        "title": "Example Name",
+        "date": "This is an date.",
+        "artwork": "Example Artwork",
+        "notes": "I liked track 4"
+        },
+      
+      {
+        "id": 2,
+        "artist": "Example Artist 2",
+        "title": "Example Name 2",
+        "date": "This is another date.",
+        "artwork": "Example Artwork 2",
+        "notes": "I liked track 7"
+      }
+    ]
+  }

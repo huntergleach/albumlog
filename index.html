@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Record Collector Lite</title>
+  <link rel="shortcut icon" href="images/recordicon.png" type="image/png">
+  <link rel="stylesheet" href="./styling/style.css">
+</head>
+<!-- add record icon to title bar in head section -->
+<!--  style the page like a notepad? 
+      embed the input boxes in artwork on the page, so the bottom area can 
+     be more visually simple  -->
+<body>
+<h1><u>Record Collector Lite</u></h1>
+  <h3>Adding a new record to your collection? Log it here!</h3>
+  
+   <form id="form">
+   <div>
+        <label for="artist">Artist: </label>
+        <input type="text" name="artist" id="artist">
+      </div>
+      <br>
+    <div>
+      <label for="title">Title: </label>
+      <input type="text" name="title" id="title">
+    </div>
+    <br>
+    <div>
+        <label for="date">Release Date: <br> (mm/dd/yyyy)</label>
+        <input type="text" name="date" id="date">
+      </div>
+      <br>
+      <div>
+      <form action="/action_page.php">
+        <label for="date">Upload your Artwork: </label>
+        <input type="file" id="real-file" name="filename">
+      </form>
+    </div>
+      <br>
+    <div>
+      <label for="notes">Notes: </label> <br>
+      <textarea name="notes" id="notes" cols="30" rows="10">
+      </textarea>
+    </div>
+
+    <input type="submit" value="Log it!">
+
+  </form>
+
+  <h3><u>My Collection</u></h3>
+  <hr>
+  <div id="albums">
+    
+  </div>
+  <script src="./jscripts/index.js"></script>
+  <script src="./jscripts/globals.js"></script>
+  <script src="./jscripts/blog.js"></script>
+  <script src="./jscripts/api.js"></script>
+</body>
+</html>
