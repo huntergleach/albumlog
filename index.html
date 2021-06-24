@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <title>Record Collector Lite</title>
   <link rel="shortcut icon" href="images/recordicon.png" type="image/png">
   <link rel="stylesheet" href="./styling/style.css">
@@ -13,40 +18,60 @@
       embed the input boxes in artwork on the page, so the bottom area can 
      be more visually simple  -->
 <body>
-<h1><u>Record Collector Lite</u></h1>
+<h2><u>Record Collector Lite</u></h2>
   <h3>Adding a new record to your collection? Log it here!</h3>
   
-   <form id="form">
-   <div>
-        <label for="artist">Artist: </label>
-        <input type="text" name="artist" id="artist">
-      </div>
-      <br>
-    <div>
-      <label for="title">Title: </label>
-      <input type="text" name="title" id="title">
-    </div>
-    <br>
-    <div>
-        <label for="date">Release Date: <br> (mm/dd/yyyy)</label>
-        <input type="text" name="date" id="date">
-      </div>
-      <br>
-      <div>
-      <form action="/action_page.php">
-        <label for="date">Upload your Artwork: </label>
-        <input type="file" id="real-file" name="filename">
-      </form>
-    </div>
-      <br>
-    <div>
-      <label for="notes">Notes: </label> <br>
-      <textarea name="notes" id="notes" cols="30" rows="10">
-      </textarea>
-    </div>
+  <form id="form">
+  <div id ="info" class="container">
+    <div id="artist" class="input-field col s6">
+      <input id="artist" type="text" class="validate">
+      <label for="artist">Artist </label>
+          <!-- <label for="artist">Artist </label> -->
+        </div>
 
-    <input type="submit" value="Log it!">
+        <br>
+        
+        <div id="title" class="input-field col s6">
+          <input id="title" type="text" class="validate">
+          <label for="title">Title </label>
+        <!-- <label for="title">Title </label> -->
+      </div>
 
+      <br>
+      
+        <div id="date" class="input-field col s12">
+        <input id="date" type="date" class="validate">
+        <label for="date">Release Date</label>
+          <!-- <label for="date">Release Date <br> (mm/dd/yyyy)</label> -->
+        </div>
+
+        <br>
+        
+        <div id="notes" class="input-field col s12">
+          <textarea id="notes" class="materialize-textarea"></textarea>
+          <label for="notes">Notes</label>
+        </div>
+
+        <br>
+    
+        <div id="artwork" >
+        <form action="/action_page.php">
+          <label for="date">Upload your Artwork: </label>
+          <input type="file" id="real-file" name="filename">
+          <!-- <p>
+            <label>
+              <input type="checkbox" class="filled-in" checked="checked" />
+              <span>checkbox</span>
+            </label>
+          </p> -->
+        </form>
+      </div>
+
+      <br>
+      <br>
+    
+      <input type="submit" value="Log it!">
+    </div>
   </form>
 
   <h3><u>My Collection</u></h3>
@@ -56,7 +81,8 @@
   </div>
   <script src="./jscripts/index.js"></script>
   <script src="./jscripts/globals.js"></script>
-  <script src="./jscripts/blog.js"></script>
+  <script src="./jscripts/log.js"></script>
   <script src="./jscripts/api.js"></script>
+  <script src="./jscripts/imagedisplay.js"></script>
 </body>
 </html>

@@ -7,8 +7,10 @@
               // const attachSubmitFormEvent = event => {
               //   form().addEventListener('submit', submitForm);
               // }
+            
               // const submitForm = event => {
               //   event.preventDefault();
+              // }
   
 
   const attachSubmitFormEvent = event => {  
@@ -49,6 +51,4 @@ document.addEventListener('DOMContentLoaded', event => {
 //     .then(resp => resp.json())
 //     .then(album => album.forEach(album => displayAlbums(album)))
  
-// }
-
-
+// 

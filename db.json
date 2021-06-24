@@ -1,21 +1,90 @@
 {
-    "articles": [
-      {
-        "id": 1,
-        "artist": "Example Artist",
-        "title": "Example Name",
-        "date": "This is an date.",
-        "artwork": "Example Artwork",
-        "notes": "I liked track 4"
-        },
-      
-      {
-        "id": 2,
-        "artist": "Example Artist 2",
-        "title": "Example Name 2",
-        "date": "This is another date.",
-        "artwork": "Example Artwork 2",
-        "notes": "I liked track 7"
-      }
-    ]
-  }
+  "articles": [
+    {
+      "id": 1,
+      "artist": "Example Artist",
+      "title": "Example Name",
+      "date": "This is an date.",
+      "artwork": "Example Artwork",
+      "notes": "I liked track 4"
+    },
+    {
+      "id": 2,
+      "artist": "Example Artist 2",
+      "title": "Example Name 2",
+      "date": "This is another date.",
+      "artwork": "Example Artwork 2",
+      "notes": "I liked track 7"
+    },
+    {
+      "artist": "vfdavfdav",
+      "title": "vfdavfdav",
+      "date": "vfdavfdav",
+      "notes": "      vfdavfadvadvafdv",
+      "id": 3
+    },
+    {
+      "artist": "vfdavfdav",
+      "title": "vfdavfdav",
+      "date": "vfdavfdav",
+      "notes": "      vfdavfadvadvafdv",
+      "id": 4
+    },
+    {
+      "artist": "vfdavfdav",
+      "title": "vfdavfdav",
+      "date": "vfdavfdav",
+      "notes": "      vfdavfadvadvafdv",
+      "id": 5
+    },
+    {
+      "artist": "vfdavfdav",
+      "title": "vfdavfdav",
+      "date": "vfdavfdav",
+      "notes": "      vfdavfadvadvafdv",
+      "id": 6
+    },
+    {
+      "date": "vdsavdsav ",
+      "id": 7
+    },
+    {
+      "date": "vdsavdsav ",
+      "id": 8
+    },
+    {
+      "date": "vdsavdsav ",
+      "id": 9
+    },
+    {
+      "date": "vdsavdsav ",
+      "id": 10
+    },
+    {
+      "date": "vdsavdsav ",
+      "id": 11
+    },
+    {
+      "date": "vdsavdsav ",
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "id": 15
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 17
+    },
+    {
+      "id": 18
+    }
+  ]
+}

@@ -1,11 +1,17 @@
-body {
-    background-color: rgb(151, 0, 0);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-  }
 
+body {
+    background-color: rgb(162, 253, 230);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
 
 #albums {
-    background-color: lightcoral;
+    background-color: grey;
     float: left;
     align-content: inherit;
 }
+
+.input-field label {
+    color: #000;
+  }
+
