@@ -2,6 +2,7 @@ class Api {
     static baseUrl = 'http://localhost:3000';
   
     static fetchAlbums = () => {
+      
       fetch(Api.baseUrl + '/articles')
       .then(resp => resp.json())
       .then(data => {
@@ -13,6 +14,7 @@ class Api {
     }
   
     static postAlbum = album => {
+    
       fetch(Api.baseUrl + '/articles', {
         method: "POST",
         headers: {

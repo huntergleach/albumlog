@@ -2,7 +2,8 @@
 class Album {
     static all = [];
   
-    constructor(artist, title, date, artwork, notes) {
+    constructor(id, artist, title, date, artwork, notes) {
+      this.id = id;
       this.artist = artist;
       this.title = title;
       this.date = date;
@@ -13,23 +14,23 @@ class Album {
 
     display = () => {
         const div = document.createElement('div');
-        const titleH3 = document.createElement('h3');
-        const artistH4 = document.createElement('h4');
+        const pArtist = document.createElement('p');
+        const titleH3 = document.createElement('h4');
         const pReleaseDate = document.createElement('p');
         const imgArtwork = document.createElement('img');
         // display the album artwork here (use different element)
         const pNotes = document.createElement('p');
         const hr = document.createElement('hr');
 
-        titleH3.innerText = album.title;
-        artistH4.innerText = `By: ${ album.artist }`;
-        pReleaseDate.innerText = `Released: ${ album.date }`;
-        // imgArtwork.innerHTML = album.artwork;
+        pArtist.innerText = `By: ${ this.artist }`;
+        titleH3.innerText = this.title;
+        pReleaseDate.innerText = `Released: ${ this.date }`;
+        imgArtwork.innerHTML = ''
         // display uploaded file as 'cover' of div
-        pNotes.innerText = notesInput;
+        pNotes.innerText = this.notes;
 
+        div.appendChild(pArtist);
         div.appendChild(titleH3);
-        div.appendChild(artistH4);
         div.appendChild(pReleaseDate);
         div.appendChild(imgArtwork);
         // append artwork here 
@@ -47,11 +48,12 @@ class Album {
         artist: artistInput().value,
         title: titleInput().value,
         date: dateInput().value,
-        // artwork: artworkInput().value,
+        artwork: artworkInput().value,
         notes: notesInput().value
       }
-    
+   
       Api.postAlbum(album)
+      
     
     }
 

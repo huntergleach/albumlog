@@ -5,10 +5,10 @@ body {
     
 }
 
-#albums {
-    background-color: grey;
+#albums div {
+    background-color: rgb(121, 121, 255);
     float: left;
-    align-content: inherit;
+    padding: 20px;
 }
 
 .input-field label {
