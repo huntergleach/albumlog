@@ -6,6 +6,7 @@
 
   const attachSubmitFormEvent = event => {  
 form().addEventListener('submit', Album.submitForm);
+
 }
 
 document.addEventListener('DOMContentLoaded', event => {
