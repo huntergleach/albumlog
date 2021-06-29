@@ -1,19 +1,17 @@
 {
   "articles": [
     {
-      "artist": "new band",
-      "title": "new album",
-      "date": "2012-06-24",
-      "artwork": "C:\\fakepath\\recordicon.jpeg",
-      "notes": "great new record i just found",
+      "artist": "Nine Inch Nails",
+      "title": "The Downward Spiral",
+      "date": "1994-03-08",
+      "notes": "notes about it? ",
       "id": 1
     },
     {
-      "artist": "new record",
-      "title": "new artist",
-      "date": "2021-06-24",
-      "artwork": "C:\\fakepath\\recordicon.jpeg",
-      "notes": "just came out today, killer artwork",
+      "artist": "Nine Inch Nails",
+      "title": "The Downward Spiral",
+      "date": "1994-03-08",
+      "notes": "logging after changing input ",
       "id": 2
     }
   ]

@@ -11,38 +11,40 @@ class Album {
       this.notes = notes;
       Album.all.push(this)
     }
-
+    
+   
     display = () => {
         const div = document.createElement('div');
         const pArtist = document.createElement('p');
-        const titleH3 = document.createElement('h4');
+        const titleH4 = document.createElement('h4');
         const pReleaseDate = document.createElement('p');
-        const imgArtwork = document.createElement('img');
+        const artworkdiv = document.createElement('img');
         // display the album artwork here (use different element)
         const pNotes = document.createElement('p');
-        const hr = document.createElement('hr');
+        // const hr = document.createElement('hr');
 
-        pArtist.innerText = `By: ${ this.artist }`;
-        titleH3.innerText = this.title;
+        pArtist.innerText = this.artist;
+        titleH4.innerText = this.title;
         pReleaseDate.innerText = `Released: ${ this.date }`;
-        imgArtwork.innerHTML = ''
+        artworkdiv.innerText = this.artwork;
         // display uploaded file as 'cover' of div
         pNotes.innerText = this.notes;
 
         div.appendChild(pArtist);
-        div.appendChild(titleH3);
+        div.appendChild(titleH4);
         div.appendChild(pReleaseDate);
-        div.appendChild(imgArtwork);
+        div.appendChild(artworkdiv);
         // append artwork here 
         div.appendChild(pNotes);
 
         albumsDiv().appendChild(div);
-        albumsDiv().appendChild(hr); 
+        // albumsDiv().appendChild(hr); 
     }
       
     
     static submitForm = event => {
       event.preventDefault();
+      
       
       let album = {
         artist: artistInput().value,
@@ -54,7 +56,8 @@ class Album {
    
       Api.postAlbum(album)
       
-    
+      document.getElementById('form').reset();
+      document.getElementById('artworkdiv').reset();
     }
 
     
