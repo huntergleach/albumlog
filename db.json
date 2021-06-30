@@ -3,61 +3,23 @@
     {
       "artist": "Nine Inch Nails",
       "title": "The Downward Spiral",
-      "date": "1994-03-08",
-      "notes": "notes about it? ",
+      "genre": "Rock/Electronic",
+      "notes": "Love this album, some of my favorite songs ever ",
       "id": 1
     },
     {
-      "artist": "",
-      "title": "",
-      "date": "",
-      "notes": "",
+      "artist": "Northlane",
+      "title": "Alien",
+      "genre": "metal",
+      "notes": "gotta love low-tuned guitars",
       "id": 2
     },
     {
-      "artist": "",
-      "title": "",
-      "date": "",
-      "notes": "",
+      "artist": "test",
+      "title": "test",
+      "genre": "test",
+      "notes": "testing123",
       "id": 3
-    },
-    {
-      "artist": "",
-      "title": "",
-      "date": "",
-      "notes": "",
-      "id": 4
-    },
-    {
-      "artist": "nfesa",
-      "title": "jytue",
-      "date": "3333-03-31",
-      "notes": "grewgrfdsgfdsg",
-      "id": 5
-    },
-    {
-      "artist": "new one ",
-      "title": "testing this",
-      "date": "2020-09-09",
-      "notes": "testing ",
-      "id": 6
-    },
-    {
-      "id": 7
-    },
-    {
-      "artist": "",
-      "title": "",
-      "date": "",
-      "notes": "",
-      "id": 8
-    },
-    {
-      "artist": "",
-      "title": "",
-      "date": "",
-      "notes": "",
-      "id": 9
     }
   ]
 }

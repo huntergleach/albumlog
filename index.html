@@ -12,19 +12,35 @@
   <title>Record Collector Lite</title>
   <link rel="shortcut icon" href="images/recordicon.png" type="image/png">
   <link rel="stylesheet" href="./styling/style.css">
+  <div id='container' class="container">
+  <div class="navbar-fixed">
+  <nav class ="container">
+    <div id="nav" class="nav-wrapper indigo lighten-2">
+      <a href="#" class="brand-logo">Record Collector Lite</a>
+    </div>
+    </div>
+  </nav>
+  <style> 
+    body {
+      background-image: url(images/backgroundswirl.jpeg);
+      background-color: rgb(253, 253, 253)c;
+    }
+    </style>
 </head>
 <!-- add record icon to title bar in head section -->
 <!--  style the page !!! embed the input boxes in artwork, so the bottom area can 
      be more visually simple  -->
 <body>
-<h2 id='heading'>Record Collector Lite</h2>
+<!-- <h2 id='heading'>Record Collector Lite</h2> -->
 <!-- work in nav bar here, looks cleaner than bare title -->
-  <h5 id='blurb'>Adding a new record to your collection? Log it here!</h5>
+  <h6 id='blurb'>Adding a new record to your collection? Log it here!</h6>
   
+  <br>
+
   <form id="form">
-  <div id ="info" class="container">
+  <div id ="info">
     <div id="artistdiv" class="input-field col s6">
-      <input id="artist" type="text" class="validate">
+      <input id="artist" type="text">
       <label for="artist">Artist </label>
           <!-- <label for="artist">Artist </label> -->
         </div>
@@ -32,23 +48,23 @@
         <br>
         
         <div id="titlediv" class="input-field col s6">
-          <input id="title" type="text" class="validate">
+          <input id="title" type="text">
           <label for="title">Title </label>
         <!-- <label for="title">Title </label> -->
       </div>
 
       <br>
       
-        <div id="datediv" class="input-field col s12">
-        <input id="date" type="date" class="validate">
-        <label for="date">Release Date</label>
-          <!-- <label for="date">Release Date <br> (mm/dd/yyyy)</label> -->
-        </div>
+      <div id="genrediv" class="input-field col s6">
+        <input id="genre" type="text">
+        <label for="genre">Genre </label>
+      <!-- <label for="title">Title </label> -->
+    </div>
 
         <br>
         
-        <div id="notesdiv" class="input-field col s12">
-          <textarea id="notes" class="materialize-textarea"></textarea>
+        <div id="notesdiv" class="input-field col s6">
+          <input id="notes" type="text">
           <label for="notes">Notes</label>
         </div>
 
@@ -70,7 +86,7 @@
     
       <input id='submit' 
               type="submit" 
-              class="waves-effect waves-light btn-large" 
+              class="waves-effect waves-light btn-large indigo lighten-2" 
               value="Log it!">
       <br>
       <br>
@@ -78,10 +94,10 @@
       <hr id='collection'>
     </div>
   </form>
-
+</div>
   <!-- <hr id='collection'> -->
   <!-- <hr class="solid"> -->
-  <div id="albums"></div>
+  <div id="albums" ></div>
 
   <script src="./jscripts/index.js"></script>
   <script src="./jscripts/globals.js"></script>

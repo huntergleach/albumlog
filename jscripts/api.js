@@ -7,7 +7,7 @@ class Api {
       .then(resp => resp.json())
       .then(data => {
         data.forEach(albumData => {
-          let album = new Album(albumData.id, albumData.artist, albumData.title, albumData.date, albumData.artwork, albumData.notes)
+          let album = new Album(albumData.id, albumData.artist, albumData.title, albumData.genre, albumData.artwork, albumData.notes)
           album.display()
         })
       })
@@ -25,7 +25,7 @@ class Api {
       })
       .then(resp => resp.json())
       .then(albumData => {
-        let album = new Album(albumData.id, albumData.artist, albumData.title, albumData.date, albumData.artwork, albumData.notes)
+        let album = new Album(albumData.id, albumData.artist, albumData.title, albumData.genre, albumData.artwork, albumData.notes)
         album.display()
       })
     }

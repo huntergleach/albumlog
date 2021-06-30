@@ -20,14 +20,27 @@ inpFile.addEventListener ("change", function() {
             reader.addEventListener('load', function() {
                 
                 previewImage.setAttribute("src", this.result);
+                // previewImage.setAttribute('id', `${this.id}`);
             })
             reader.readAsDataURL(file);
+            
             // reader.readAsText(file);
       
         } else {
+            
             previewDefaultText.style.display = null;
-            previewImage.style.display = null;
-            previewImage.setAttribute('src', "")
+            
+            previewImage.style.display = 'block';
+            previewImage.setAttribute('src', "images/recordicon.png")
         }
-        // console.log(this);
-});
+       
+        console.log(this.result)
+       
+        
+    })
+    
+
+// const loadFile = function(event) {
+// 	const image = document.getElementById('previewImage');
+// 	image.src = URL.createObjectURL(event.target.files[0]);
+// };
