@@ -16,29 +16,29 @@ class Album {
    
     display = () => {
         const div = document.createElement('div');
-        div.setAttribute('href', 'https://www.google.com')
+        // div.setAttribute('href', 'https://www.google.com')
         const pArtist = document.createElement('p');
         const titleH4 = document.createElement('h4');
         const pGenre = document.createElement('p');
-        // previewImage.setAttribute('src', getElementById('previewImage'))
         const albumArt = document.createElement('img');
-        // display the album artwork here (use different element??)
+        // setAttribute?
+        // display album artwork here
         const pNotes = document.createElement('p');
        
+         console.log(this)
          
         pArtist.innerText = this.artist;
         titleH4.innerText = this.title;
         pGenre.innerText = this.genre;
-        // albumArt.innerText = this.artowrk;
-        // display uploaded file as 'cover' of div
+        albumArt.display = this.artowrk;
         pNotes.innerText = this.notes;
 
-      // console.log(this)
+     
         
         div.appendChild(pArtist);
         div.appendChild(titleH4);
         div.appendChild(pGenre);
-        // div.appendChild(albumArt);
+        div.appendChild(albumArt);
         // append artwork here 
         div.appendChild(pNotes);
 
@@ -50,12 +50,16 @@ class Album {
     static submitForm = event => {
       event.preventDefault();
       
+      // getImagePreview().innerHTML= ''
+      // const file = getFileUpload().files[0]
+      // const albumArt = document.createElement('img');
+      // img.src = img.url
       
       let album = {
         artist: artistInput().value,
         title: titleInput().value,
         genre: genreInput().value,
-        // artwork: artworkInput().value,
+        artwork: artworkInput().value,
         notes: notesInput().value
       }
    

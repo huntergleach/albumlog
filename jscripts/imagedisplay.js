@@ -7,7 +7,7 @@ previewImage.setAttribute('id', 'previewImage')
 const previewDefaultText = previewContainer.querySelector('.image-preview__default-text');
 
 
-inpFile.addEventListener ("change", function() {
+inpFile.addEventListener ('change', function() {
     const file = this.files[0];
 
         if (file) {
@@ -19,12 +19,10 @@ inpFile.addEventListener ("change", function() {
 
             reader.addEventListener('load', function() {
                 
-                previewImage.setAttribute("src", this.result);
+                previewImage.setAttribute('src', this.result);
                 // previewImage.setAttribute('id', `${this.id}`);
             })
-            reader.readAsDataURL(file);
-            
-            // reader.readAsText(file);
+            reader.readAsDataURL(file)
       
         } else {
             
@@ -33,10 +31,14 @@ inpFile.addEventListener ("change", function() {
             previewImage.style.display = 'block';
             previewImage.setAttribute('src', "images/recordicon.png")
         }
-       
-        console.log(this.result)
-       
+
         
+       
+        // console.log(this.result)
+        // addEventListener('submit', function() {
+        //     albumArt.setAttribute('src', this.result)
+        
+        // })
     })
     
 
