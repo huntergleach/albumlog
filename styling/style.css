@@ -1,5 +1,5 @@
 
-/* navbar */
+/* navbar text */
 #nav a {
     color: black;
     padding-left: 10px;
@@ -7,12 +7,10 @@
 }
 
 body {
-    /* background-image: url('images/backgroundswirl.jpeg'); */
-    background-color: #d9e6ff;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  
+  /* background-image: url('images/backgroundswirl.jpeg'); */
+  background-color: rgb(253, 253, 253)c;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-
 #collection hr {
     color: black;
     border-top: black;
@@ -24,6 +22,44 @@ body {
 h2, h6, h3 {
     text-align: left;
     color: rgb(253, 253, 253);
+}
+/* preview container  */
+.image-preview {
+  width: 300px;
+  min-height: 100px;
+  /* border: 1px solid rgb(155, 155, 155); */
+  margin-top: 15px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  /* float:left; */
+  color: transparent;
+
+}
+/* preview image */
+.image-preview__image {
+    display: none;
+    max-width: 100%;
+
+}
+
+/* image display after submit */
+#topLayer {
+  z-index: 2;
+  position: absolute; left:0; top: 0; 
+ 
+  max-width: 300px;
+  max-height: 300px;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#topLayer:hover {
+  opacity: 0.1;
+  filter: alpha(opacity=10);
 }
 /* lower region divs  */
 #albums div {
@@ -37,11 +73,17 @@ h2, h6, h3 {
     height: 300px;
     max-width: 300px;
     max-height: 300px;
+    position: relative;
+    z-index: 1;
 }
  
-#submit {
+input#submit  {
     color: #d9e6ff;
-    
+    align-self: center;
+}
+#inpFile {
+  color: #d9e6ff;
+  
 }
 .materialize-textarea [type=text] {
     color: #d9e6ff;
@@ -73,23 +115,3 @@ h2, h6, h3 {
     border-bottom: 1px solid #d9e6ff;
     box-shadow: 0 1px 0 0 #d9e6ff;
   }
-/* preview container  */
-  .image-preview {
-      width: 300px;
-      min-height: 100px;
-      /* border: 1px solid rgb(155, 155, 155); */
-      margin-top: 15px;
-      padding: 10px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      color: transparent;
-
-    }
-/* preview image */
-    .image-preview__image {
-        display: none;
-        width: 100%;
-    }

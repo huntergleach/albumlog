@@ -11,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <title>Record Collector Lite</title>
   <link rel="shortcut icon" href="images/recordicon.png" type="image/png">
+  <!-- shortcut icon here -->
   <link rel="stylesheet" href="./styling/style.css">
   <div id='container' class="container">
   <div class="navbar-fixed">
@@ -27,12 +28,7 @@
     }
     </style>
 </head>
-<!-- add record icon to title bar in head section -->
-<!--  style the page !!! embed the input boxes in artwork, so the bottom area can 
-     be more visually simple  -->
 <body>
-<!-- <h2 id='heading'>Record Collector Lite</h2> -->
-<!-- work in nav bar here, looks cleaner than bare title -->
   <h6 id='blurb'>Adding a new record to your collection? Log it here!</h6>
   
   <br>
@@ -42,61 +38,58 @@
     <div id="artistdiv" class="input-field col s6">
       <input id="artist" type="text">
       <label for="artist">Artist </label>
-          <!-- <label for="artist">Artist </label> -->
-        </div>
-
-        <br>
-        
-        <div id="titlediv" class="input-field col s6">
-          <input id="title" type="text">
-          <label for="title">Title </label>
-        <!-- <label for="title">Title </label> -->
-      </div>
-
-      <br>
-      
-      <div id="genrediv" class="input-field col s6">
-        <input id="genre" type="text">
-        <label for="genre">Genre </label>
-      <!-- <label for="title">Title </label> -->
     </div>
 
         <br>
         
-        <div id="notesdiv" class="input-field col s6">
-          <input id="notes" type="text">
-          <label for="notes">Notes</label>
-        </div>
+    <div id="titlediv" class="input-field col s6">
+      <input id="title" type="text">
+      <label for="title">Title </label>
+    </div>
+
+      <br>
+      
+    <div id="genrediv" class="input-field col s6">
+      <input id="genre" type="text">
+       <label for="genre">Genre </label>
+    </div>
 
         <br>
-    
-        <label for="artworkdiv">Upload your Artwork: </label>
-        <div id="artworkdiv" class= "image-preview">
-          <br>
-          <input type="file" id="inpFile" name="inpFile">
-          <!-- <form action="/action_page.php"> -->
-            <img src="" alt="image preview" class="image-preview__image">
-            <span class="image-preview__default-text"></span>
-        <!-- </form> -->
+        
+    <div id="notesdiv" class="input-field col s6">
+       <input id="notes" type="text">
+       <label for="notes">Notes</label>
+    </div>
+
+        <br>
+   
+    <label for="artworkdiv">Upload your Artwork: </label>
+    <div id="artworkdiv" class= "image-preview">
+      <div id='ulpoadButton'>
+      <input type="file" id="inpFile" name="inpFile">
+        <img id='uploadPreview' src="" alt="image preview" class="image-preview__image">
+        <span class="image-preview__default-text"></span>
       </div>
+    </div>
       
 
-      <br>
-      <br>
+    <br>
+    <br>
     
-      <input id='submit' 
-              type="submit" 
-              class="waves-effect waves-light btn-large indigo lighten-2" 
-              value="Log it!">
-      <br>
-      <br>
-      <h3 id='mycollection'>My Collection</h3>
-      <hr id='collection'>
+    <input id='submit' 
+           type="submit" 
+           class="waves-effect waves-light btn-large indigo lighten-2" 
+           value="Log it!">
+    <br>
+    <br>
+    <h3 id='mycollection'>My Collection</h3>
+        <h6>Hover over the artwork to reveal details!</h6>
+
+    <hr id='collection'>
     </div>
   </form>
 </div>
-  <!-- <hr id='collection'> -->
-  <!-- <hr class="solid"> -->
+
   <div id="albums" ></div>
 
   <script src="./jscripts/index.js"></script>

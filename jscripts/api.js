@@ -12,6 +12,7 @@ class Api {
         })
       })
     }
+     
   
     static postAlbum = album => {
     

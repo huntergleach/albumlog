@@ -1,48 +1,40 @@
-// const artworkInput = document.getElementById('inpFile')
+// getting file from input
+const inpFile = document.getElementById('inpFile');
+// div id as the container
 const previewContainer = document.getElementById('artworkdiv');
-
-const previewImage = previewContainer.querySelector('.image-preview__image');
-previewImage.setAttribute('id', 'previewImage')
-
+// 
 const previewDefaultText = previewContainer.querySelector('.image-preview__default-text');
+const previewImage = previewContainer.querySelector('.image-preview__image');
+
+previewImage.setAttribute('id', 'previewImage')
 
 
 inpFile.addEventListener ('change', function() {
     const file = this.files[0];
-
-        if (file) {
-            const reader = new FileReader();
-
-            previewDefaultText.style.display = 'none';
-            previewImage.style.display = 'block';
-            
-
-            reader.addEventListener('load', function() {
-                
-                previewImage.setAttribute('src', this.result);
-                // previewImage.setAttribute('id', `${this.id}`);
-            })
-            reader.readAsDataURL(file)
-      
-        } else {
-            
-            previewDefaultText.style.display = null;
-            
-            previewImage.style.display = 'block';
-            previewImage.setAttribute('src', "images/recordicon.png")
-        }
-
+   
+     
+    if (file) {
+        // if a file is uploaded, read it
+        const reader = new FileReader();
         
-       
-        // console.log(this.result)
-        // addEventListener('submit', function() {
-        //     albumArt.setAttribute('src', this.result)
+        // once the file is read, load, and set src
+        previewDefaultText.style.display = 'none';
+        previewImage.style.display = 'block';
+        reader.addEventListener('load', function() {
+            // on load for file input
+            previewImage.setAttribute('src', this.result);
+        })
         
-        // })
-    })
+        reader.readAsDataURL(file)
+        // creating URL
     
+    } else {
+        // else, leave it blank
+        previewDefaultText.style.display = null;
+        previewImage.style.display = null;
+        
+        previewImage.setAttribute('src', '')
+    }
+})
 
-// const loadFile = function(event) {
-// 	const image = document.getElementById('previewImage');
-// 	image.src = URL.createObjectURL(event.target.files[0]);
-// };
+

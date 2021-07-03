@@ -1,18 +1,5 @@
 {
   "articles": [
-    {
-      "artist": "Nine Inch Nails",
-      "title": "The Downward Spiral",
-      "genre": "Rock/Electronic",
-      "notes": "Love this album, some of my favorite songs ever ",
-      "id": 1
-    },
-    {
-      "artist": "Northlane",
-      "title": "Alien",
-      "genre": "metal",
-      "notes": "gotta love low-tuned guitars",
-      "id": 2
-    }
+
   ]
 }

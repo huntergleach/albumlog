@@ -7,69 +7,65 @@ class Album {
       this.artist = artist;
       this.title = title;
       this.genre = genre;
-      this.artwork = artwork;
       this.notes = notes;
+      this.artwork = artwork;
       Album.all.push(this)
     
     }
    
    
     display = () => {
-        const div = document.createElement('div');
-        // div.setAttribute('href', 'https://www.google.com')
+        // details creation
+        const albumContainer = document.createElement('div');
+        albumContainer.setAttribute('id', 'albumContainer')
         const pArtist = document.createElement('p');
         const titleH4 = document.createElement('h4');
         const pGenre = document.createElement('p');
-        const albumArt = document.createElement('img');
-        // setAttribute?
-        // display album artwork here
         const pNotes = document.createElement('p');
+        // artwork creation
+        const albumArtwork = document.createElement('img');
+        albumArtwork.setAttribute('id', 'topLayer')
+        albumArtwork.setAttribute('class', 'artDisplay');
+        albumArtwork.setAttribute('src', this.artwork);
        
-         console.log(this)
-         
+        
+        // populating elements
         pArtist.innerText = this.artist;
         titleH4.innerText = this.title;
         pGenre.innerText = this.genre;
-        albumArt.display = this.artowrk;
         pNotes.innerText = this.notes;
 
      
-        
-        div.appendChild(pArtist);
-        div.appendChild(titleH4);
-        div.appendChild(pGenre);
-        div.appendChild(albumArt);
-        // append artwork here 
-        div.appendChild(pNotes);
+        // adding elements to div 
+        albumContainer.appendChild(pArtist);
+        albumContainer.appendChild(titleH4);
+        albumContainer.appendChild(pGenre);
+        albumContainer.appendChild(pNotes);
+        albumContainer.appendChild(albumArtwork);
 
-        albumsDiv().appendChild(div);
-       
+        albumsDiv().appendChild(albumContainer);
+          
     }
       
-    
+    // submit event
     static submitForm = event => {
       event.preventDefault();
-      
-      // getImagePreview().innerHTML= ''
-      // const file = getFileUpload().files[0]
-      // const albumArt = document.createElement('img');
-      // img.src = img.url
-      
+
+      const file = getFileUpload().files[0]
+      const dataUrl = window.URL.createObjectURL(file);
+
       let album = {
         artist: artistInput().value,
         title: titleInput().value,
         genre: genreInput().value,
-        artwork: artworkInput().value,
-        notes: notesInput().value
+        notes: notesInput().value,
+        artwork: dataUrl,
       }
-   
+      
       Api.postAlbum(album)
       
-    
       document.getElementById('form').reset();
-      // document.getElementsByName('previewContainer').reset();
-     
+      
     }
-    
     
 }
