@@ -1,7 +1,7 @@
 
 class Album {
     static all = [];
-  
+    // building the container for album
     constructor(id, artist, title, genre, artwork, notes) {
       this.id = id;
       this.artist = artist;
@@ -53,7 +53,7 @@ class Album {
 
       const file = getFileUpload().files[0]
       const dataUrl = window.URL.createObjectURL(file);
-
+      // album content assignment 
       let album = {
         artist: artistInput().value,
         title: titleInput().value,

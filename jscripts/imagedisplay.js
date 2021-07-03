@@ -2,7 +2,7 @@
 const inpFile = document.getElementById('inpFile');
 // div id as the container
 const previewContainer = document.getElementById('artworkdiv');
-// 
+
 const previewDefaultText = previewContainer.querySelector('.image-preview__default-text');
 const previewImage = previewContainer.querySelector('.image-preview__image');
 
